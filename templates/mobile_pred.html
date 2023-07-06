@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Prediction</title>
+    <h1> Mobile Price Prediction </h1>
+</head>
+
+<body>
+    
+    <img align="center" src="{{url_for('static',filename = 'mobile_img.png')}}" alt="img">
+    <style>
+   
+   form {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(255, 255, 255);
+        text-shadow: rgb(0, 0, 0);
+        font-size:20px;
+        background-color: rgb(16, 42, 42);
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: rgb(0, 0, 0);
+        font-size: 100px;
+        color: #fff;
+        text-align: center;
+    }
+
+    </style>
+
+
+
+    
+    <form method="GET" action="/predict_price">
+
+        <br>
+        <br>
+
+        <label>Sale:</label>
+        <input type = "text" name = "Sale">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Weight:</label>
+        <input type = "text" name = "weight">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Resoloution:</label>
+        <input type = "text" name = "resoloution">
+        </select>
+
+        <br>
+        <br>
+
+        <label>ppi:</label>
+        <input type = "text" name = "ppi">
+        </select>
+
+        <br>
+        <br>
+
+        <label>cpu core:</label>
+        <input type = "text" name = "cpu_core">
+        </select>
+
+        <br>
+        <br>
+
+        <label>cpu_freq:</label>
+        <input type = "text" name = "cpu_freq">
+        </select>
+
+        <br>
+        <br>
+
+        <label>internal_mem:</label>
+        <input type = "text" name = "internal_mem">
+        </select>
+
+        <br>
+        <br>
+
+        <label>ram:</label>
+        <input type = "text" name = "ram">
+        </select>
+
+        <br>
+        <br>
+
+        <label>RearCam:</label>
+        <input type = "text" name = "RearCam">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Front_Cam:</label>
+        <input type = "text" name = "Front_Cam">
+        </select>
+
+        <br>
+        <br>
+
+        <label>battery:</label>
+        <input type = "text" name = "battery">
+        </select>
+
+        <br>
+        <br>
+
+        <label>thickness:</label>
+        <input type = "text" name = "thickness">
+        </select>
+
+        <br>
+        <br>
+
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <h4><strong>Your Mobile Price is : <b> {{ prediction }} /- Rs.</b> Only </strong></h4>
+
+
+    </form>
+
+
+</body>
+</html>
+
