@@ -1,4 +1,4 @@
-# Mobile_Price_Predict
+# Mobile Price Predict
 This Project is thorugh application of machine learning with python programming.
 To Predict Mobile Price based on various features
 
