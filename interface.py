@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from utils import MobilePrice
+import config
 
 app = Flask(__name__)
 
@@ -39,4 +40,4 @@ def predict_price():
     return render_template('result.html', prediction = pred_price)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=False)
+    app.run(host='0.0.0.0', port=config.PORT_NUMBER, debug=False)
