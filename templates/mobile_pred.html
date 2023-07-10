@@ -10,22 +10,33 @@
 
 <body>
     <style>
-        form {
-                text-align: center;
+        body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 color: rgb(255, 255, 255);
                 text-shadow: rgb(0, 0, 0);
                 font-size:20px;
-                background-color: rgb(16, 42, 42);
+                background-image: url(https://w.wallhaven.cc/full/xl/wallhaven-xldxq3.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             h1 {
                 text-align: center;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                background-color: rgb(0, 0, 0);
-                font-size: 100px;
+                font-size: 80px;
                 color: #fff;
                 text-align: center;
+            }
+        form  {
+                position: relative;
+                left: 600px;
+            }
+
+           c :hover{
+            
+            cursor: pointer;
+            background-color: #ff0707;
+            color: #000;
             }
 
     </style>
@@ -35,25 +46,22 @@
     
     <form method="GET" action="/predict_price">
 
-        <br>
-        <br>
-
         <label>Sale:</label>
-        <input type = "text" name = "Sale">
+        <input type = "text" name = "Sale" placeholder="Enter Sale">
         </select>
 
         <br>
         <br>
 
         <label>Weight:</label>
-        <input type = "text" name = "weight">
+        <input type = "text" name = "weight" placeholder="Enter Weight">
         </select>
 
         <br>
         <br>
 
         <label>Resoloution:</label>
-        <input type = "text" name = "resoloution">
+        <input type = "text" name = "resoloution" placeholder="Enter Resoloution">
         </select>
 
         <br>
@@ -123,7 +131,7 @@
         <br>
 
 
-        <input type = "submit" value="SUBMIT">
+        <c><input type = "submit" value="SUBMIT"></c>
 
         <br>
 
@@ -135,4 +143,3 @@
 
 </body>
 </html>
-
