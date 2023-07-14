@@ -46,5 +46,8 @@ class MobilePrice():
         test_array[0,11] = self.thickness
 
 
-        predicted_price = np.around(self.model.predict(test_array)[0],3)
+        a = np.around(self.model.predict(test_array)[0],3)
+        inr = a * 4.39
+        predicted_price = np.around(inr,2)
+
         return predicted_price
