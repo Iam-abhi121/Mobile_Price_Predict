@@ -1,4 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Prediction</title>
+    <h1> Mobile Price Prediction </h1>
+
+<body>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 2px #000000;
+            text-align: center;
+            background-image: url(https://w.wallhaven.cc/full/xl/wallhaven-xldxq3.jpg);
+            background-size: cover;
+
+        }
+    </style>
+    <form method="GET" action="/predict_price">
+
+    <h2>Specifications</h2>
+    Sale : <b>{{sale_}}%off</b>
+    <br>
+    Weight : <b>{{weight_}}g</b>
+    <br>
+    Display Size : <b>{{resoloution_}}inch</b>
+    <br>
+    Graphics PPI : <b>{{ppi_}}PPI</b>
+    <br>
+    Processor Core : <b>{{cpu_core_}}Core</b>
+    <br>
+    CPU Clock Speed : <b>{{cpu_freq_}}GHz</b>
+    <br>
+    Internal Storage : <b>{{internal_mem_}}GB</b>
+    <br>
+    RAM: <b>{{ram_}}GB</b>
+    <br>
+    Rear Cam : <b>{{RearCam_}}MP</b>
+    <br>
+    Front Cam : <b>{{Front_Cam_}}MP</b>
+    <br>
+    Battery : <b>{{battery_}}mAh</b>
+    <br>
+    Thickness <b>{{thickness_}}mm</b>
+    <br>
+
+    <h2><strong>Your Mobile Price is : <b> {{ prediction }} /- Rs.</b> Only </strong></h2>
 
 
 
-<h4><strong>Your Mobile Price is : <b> {{ prediction }} /- Rs.</b> Only </strong></h4>
+</form>
+</body>
