@@ -26,13 +26,16 @@
                 font-size: 80px;
                 color: #fff;
                 text-align: center;
+                text-shadow: 2px 2px #000000;
+
             }
         form  {
-                position: relative;
-                left: 600px;
+                text-align: center;
+                text-shadow: 2px 2px #000000;
+
             }
 
-           c :hover{
+        c :hover {
             
             cursor: pointer;
             background-color: #ff0707;
@@ -47,7 +50,7 @@
     <form method="GET" action="/predict_price">
 
         <label>Sale:</label>
-        <input type = "text" name = "Sale" placeholder="Enter Sale">
+        <input type = "text" name = "Sale" step="any" placeholder="Enter Sale">
         </select>
 
         <br>
@@ -60,71 +63,96 @@
         <br>
         <br>
 
-        <label>Resoloution:</label>
-        <input type = "text" name = "resoloution" placeholder="Enter Resoloution">
+        <label>Display Size:</label>
+        <input type = "text" name = "resoloution" placeholder="Enter Display Size in inches">
         </select>
 
         <br>
         <br>
 
-        <label>ppi:</label>
-        <input type = "text" name = "ppi">
+        <label>PPI:</label>
+        <input type = "text" name = "ppi" placeholder="Enter PPI">
         </select>
 
         <br>
         <br>
 
-        <label>cpu core:</label>
-        <input type = "text" name = "cpu_core">
+        <label>CPU Core:</label>
+        <select name="cpu_core">
+            <option value="0">Zero Core</option>
+            <option value="1">Single Core</option>
+            <option value="2">Dual Core</option>
+            <option value="4">Quad Core</option>
+            <option value="6">Hexa Core</option>
+            <option value="8">Octa Core</option>
+        </select>
+        <!--<input type = "text" name = "cpu_core" placeholder="Enter CPU Core">
+        </select> -->
+
+        <br>
+        <br>
+
+        <label>CPU Freq:</label>
+        <input type = "text" name = "cpu_freq" placeholder="Enter CPU Freq">
         </select>
 
         <br>
         <br>
 
-        <label>cpu_freq:</label>
-        <input type = "text" name = "cpu_freq">
+        <label>Internal Memory:</label>
+        <select name="internal_mem">
+            <option value="4">4GB</option>
+            <option value="8">8GB</option>
+            <option value="16">16GB</option>
+            <option value="32">32GB</option>
+            <option value="64">64GB</option>
+            <option value="128">128GB</option>
+        </select>
+        <!--<<input type = "text" name = "internal_mem" placeholder="Enter Internal Memory">
+        </select>-->
+
+        <br>
+        <br>
+
+        <label>RAM:</label>
+        <select name="ram">
+            <option value="1">1GB</option>
+            <option value="2">2GB</option>
+            <option value="3">3GB</option>
+            <option value="4">4GB</option>
+            <option value="6">6GB</option>
+            <option value="8">8GB</option>
+            <option value="12">12GB</option>
+        </select>
+        <!--<input type = "text" name = "ram" placeholder="Enter RAM">
+        </select>-->
+
+        <br>
+        <br>
+
+        <label>Rear Cam:</label>
+        <input type = "text" name = "RearCam" placeholder="Enter Rear Cam">
         </select>
 
         <br>
         <br>
 
-        <label>internal_mem:</label>
-        <input type = "text" name = "internal_mem">
+        <label>Front Cam:</label>
+        <input type = "text" name = "Front_Cam" placeholder="Enter Front Cam">
         </select>
 
         <br>
         <br>
 
-        <label>ram:</label>
-        <input type = "text" name = "ram">
+        <label>Battery:</label>
+        <input type = "text" name = "battery" placeholder="Enter Battery">
         </select>
 
         <br>
         <br>
 
-        <label>RearCam:</label>
-        <input type = "text" name = "RearCam">
-        </select>
-
-        <br>
-        <br>
-
-        <label>Front_Cam:</label>
-        <input type = "text" name = "Front_Cam">
-        </select>
-
-        <br>
-        <br>
-
-        <label>battery:</label>
-        <input type = "text" name = "battery">
-        </select>
-
-        <br>
-        <br>
-
-        <label>thickness:</label>
-        <input type = "text" name = "thickness">
+        <label>Thickness:</label>
+        <input type = "text" name = "thickness" placeholder="Enter Thickness">
         </select>
 
         <br>
@@ -135,7 +163,6 @@
 
         <br>
 
-        <h4><strong>Your Mobile Price is : <b> {{ prediction }} /- Rs.</b> Only </strong></h4>
 
 
     </form>
