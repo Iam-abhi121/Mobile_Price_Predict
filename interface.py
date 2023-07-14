@@ -35,9 +35,12 @@ def predict_price():
     Obj = MobilePrice(Sale,weight,resoloution,ppi,cpu_core,cpu_freq,internal_mem,ram,RearCam,Front_Cam,battery,thickness)
     pred_price = Obj.get_predicted_price()
 
+
     
-    
-    return render_template('mobile_pred.html', prediction = pred_price)
+    return render_template('result.html',prediction=pred_price, sale_=Sale,
+                           weight_=weight, resoloution_=resoloution, ppi_=ppi,
+                           cpu_core_=cpu_core, cpu_freq_=cpu_freq, internal_mem_=internal_mem,
+                           ram_=ram, RearCam_=RearCam, Front_Cam_=Front_Cam, battery_=battery, thickness_=thickness)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=config.PORT_NUMBER, debug=False)
